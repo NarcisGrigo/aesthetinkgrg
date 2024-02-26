@@ -1,0 +1,38 @@
+RewriteEngine On
+
+# URL Rewrite Rules :
+
+    # Exclude all files and folders in the "assets" directory from rewriting
+    RewriteCond %{REQUEST_URI} ^/public/ [OR]
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+    RewriteRule ^404$ errors/404.php
+    RewriteRule ^403$ /errors/403.php
+
+# pour les routes
+
+# The RewriteRule ^$ rewrite rule is used to redirect the root URL to another page or URL. The ^$ means that the rule will only apply when the requested URL is the root of the site, i.e. when there is nothing after the domain name in the URL.
+
+# [L] stands for "Last" and indicates that if the current rule is applied, the last rule will be evaluated, and no further rewrite rules will be executed. This can be useful to prevent future rules from interfering with the current rule..
+
+
+# If the query starts with "/admin/", use "admin/" in the query string
+RewriteRule ^admin/?$                             index.php?doc=admin [L,QSA]
+RewriteRule ^admin/(\w+)/?$                       index.php?doc=admin&controller=$1 [L,QSA]
+RewriteRule ^admin/(\w+)/(\w+)$                   index.php?doc=admin&controller=$1&method=$2 [L,QSA]
+RewriteRule ^admin/(\w+)/(\w+)/(\S+)$             index.php?doc=admin&controller=$1&method=$2&id=$3 [L,QSA]
+
+RewriteRule ^$                              index.php [L]
+
+# [QSA] stands for "Query String Append" and indicates that the query string (i.e. URL parameters after the question mark?) of the URL d The origin must be preserved and added to the rewritten URL. This is commonly used to preserve URL parameters when rewriting.
+
+RewriteRule ^(\w+)/?$                       index.php?controller=$1 [L,QSA]
+RewriteRule ^(\w+)/(\w+)$                   index.php?controller=$1&method=$2 [L,QSA]
+# \d+ to capture all numeric values
+#RewriteRule ^(\w+)/(\w+)/(\d+)$             index.php?controller=$1&method=$2&id=$3 [L,QSA]
+# \S+ to capture everything except spaces
+RewriteRule ^(\w+)/(\w+)/(\S+)$             index.php?controller=$1&method=$2&id=$3 [L,QSA]
+
+
+

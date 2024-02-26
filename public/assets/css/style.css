@@ -1,0 +1,923 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1b201e;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  background-color: #1b201e;
+  font-family: "Raleway", sans-serif;
+}
+/* H E A D E R */
+
+img {
+  height: 1000px;
+}
+
+#header_img {
+  display: flex;
+  justify-content: center;
+  opacity: 0.5;
+  position: relative;
+}
+
+.middle {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.title {
+  color: #ffd700;
+  position: absolute;
+  top: 300px;
+  right: 460px;
+  text-align: center;
+}
+
+.title > p {
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+}
+
+h1 {
+  font-family: "Philosopher", sans-serif;
+  font-weight: lighter;
+  font-size: 200px;
+}
+
+/* H E A D E R */
+
+/* N A V */
+
+.registerbtn {
+  position: absolute;
+  text-align: center;
+  top: 20px;
+  right: 30px;
+  font-size: 20px;
+  color: #ffd700;
+  padding-top: 10px;
+}
+
+/* hover effect for <a>REGISTER</a> */
+a.registerbtn:after,
+a.registerbtn:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  height: 1em;
+  width: 100%;
+  margin-top: 1px;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+}
+
+a.registerbtn:before {
+  border-left: 1px solid;
+  border-right: 1px solid;
+  -webkit-transform: scale(1, 0);
+  transform: scale(1, 0);
+}
+
+a.registerbtn:after {
+  border-bottom: 1px solid;
+  border-top: 1px solid;
+  -webkit-transform: scale(0, 1);
+  transform: scale(0, 1);
+}
+
+a.registerbtn:hover:after,
+a.registerbtn:hover:before {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.loginbtn {
+  position: absolute;
+  text-align: center;
+  top: 20px;
+  right: 160px;
+  font-size: 20px;
+  color: #ffd700;
+  padding-top: 10px;
+}
+
+/* hover effect for <a>LOGIN</a> */
+a.loginbtn:after,
+a.loginbtn:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  height: 1em;
+  width: 100%;
+  margin-top: 1px;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+}
+
+a.loginbtn:before {
+  border-left: 1px solid;
+  border-right: 1px solid;
+  -webkit-transform: scale(1, 0);
+  transform: scale(1, 0);
+}
+
+a.loginbtn:after {
+  border-bottom: 1px solid;
+  border-top: 1px solid;
+  -webkit-transform: scale(0, 1);
+  transform: scale(0, 1);
+}
+
+a.loginbtn:hover:after,
+a.loginbtn:hover:before {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+/* N A V */
+
+/* L O G I N */
+
+.hands {
+  position: absolute;
+  right: 2px;
+  opacity: 0.5;
+}
+
+.email {
+  width: 300px;
+  height: 50px;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-top-left-radius: 25px;
+  background-color: #8b7d33;
+  color: #ffd700;
+  caret-color: #ffd700;
+}
+
+.pw {
+  width: 300px;
+  height: 50px;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-top-left-radius: 25px;
+  background-color: #8b7d33;
+  color: #ffd700;
+  caret-color: #ffd700;
+}
+
+/* this is the submit button */
+.cpw {
+  width: 150px;
+  height: 50px;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-top-left-radius: 25px;
+  background-color: #8b7d33;
+  color: #ffd700;
+  font-size: 20px;
+  font-family: "Raleway", sans-serif;
+}
+/* this is the submit button */
+
+.name {
+  width: 300px;
+  height: 50px;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-top-left-radius: 25px;
+  background-color: #8b7d33;
+  color: #ffd700;
+  caret-color: #ffd700;
+}
+
+::placeholder {
+  color: #1b201e;
+  opacity: 1;
+}
+
+h2 {
+  font-family: "Philosopher", sans-serif;
+  font-size: 80px;
+  margin-left: 55px;
+  margin-bottom: 70px;
+  color: #ffd700;
+}
+
+.email {
+  font-family: "Raleway", sans-serif;
+}
+
+.pw {
+  font-family: "Raleway", sans-serif;
+}
+
+.check {
+  font-family: "Raleway", sans-serif;
+  color: #8b7d33;
+  position: absolute;
+  bottom: 3px;
+  margin-left: 20px;
+}
+
+.checkb {
+  accent-color: #8b7d33;
+  width: 20px;
+  height: 20px;
+  margin-top: 15px;
+  margin-left: 50px;
+}
+
+.lgin {
+  position: absolute;
+  top: 350px;
+  left: 400px;
+}
+
+.box {
+  position: absolute;
+  top: 260px;
+  left: 300px;
+  width: 500px;
+  height: 500px;
+  border: 1px solid #ffd700;
+}
+
+/* L O G I N */
+
+/* R E G I S T E R */
+
+.register {
+  background-color: #c4baa6;
+}
+
+.reg {
+  position: absolute;
+  right: 270px;
+  top: 250px;
+}
+
+.titlereg {
+  position: absolute;
+  top: -150px;
+  left: -47px;
+}
+
+.remb {
+  accent-color: #8b7d33;
+  width: 20px;
+  height: 20px;
+  margin-top: 15px;
+}
+
+.regb {
+  font-family: "Raleway", sans-serif;
+  color: #8b7d33;
+  position: absolute;
+  bottom: 3px;
+  margin-left: 20px;
+}
+
+.box2 {
+  position: absolute;
+  top: 50px;
+  right: 175px;
+  width: 500px;
+  height: 600px;
+  border: 1px solid #1b201e;
+}
+
+/* R E G I S T E R */
+
+/* C O L L E C T I O N S */
+
+.collections {
+  background-color: #1b201e;
+}
+
+.btnc {
+  position: absolute;
+  right: 0px;
+  padding-top: 10px;
+  margin-right: 25px;
+  font-size: 20px;
+  color: #ffd700;
+}
+
+.btna {
+  position: absolute;
+  right: 0px;
+  padding-top: 10px;
+  margin-right: 140px;
+  font-size: 20px;
+  color: #ffd700;
+}
+
+.btnh {
+  position: absolute;
+  right: 0px;
+  padding-top: 10px;
+  margin-right: 240px;
+  font-size: 20px;
+  color: #ffd700;
+}
+
+/* hover effect for <a>HOME/ARTISTS/CONTACT</a> */
+a.btna:after,
+a.btna:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  height: 20px;
+  width: 80px;
+  margin-top: 1px;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+}
+
+a.btna:before {
+  border-left: 1px solid;
+  border-right: 1px solid;
+  -webkit-transform: scale(1, 0);
+  transform: scale(1, 0);
+}
+
+a.btna:after {
+  border-bottom: 1px solid;
+  border-top: 1px solid;
+  -webkit-transform: scale(0, 1);
+  transform: scale(0, 1);
+}
+
+a.btna:hover:after,
+a.btna:hover:before {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.btnh:after,
+a.btnh:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  height: 20px;
+  width: 59px;
+  margin-top: 1px;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+}
+
+a.btnh:before {
+  border-left: 1px solid;
+  border-right: 1px solid;
+  -webkit-transform: scale(1, 0);
+  transform: scale(1, 0);
+}
+
+a.btnh:after {
+  border-bottom: 1px solid;
+  border-top: 1px solid;
+  -webkit-transform: scale(0, 1);
+  transform: scale(0, 1);
+}
+
+a.btnh:hover:after,
+a.btnh:hover:before {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+a.btnc:after,
+a.btnc:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  height: 20px;
+  width: 87px;
+  margin-top: 1px;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+}
+
+a.btnc:before {
+  border-left: 1px solid;
+  border-right: 1px solid;
+  -webkit-transform: scale(1, 0);
+  transform: scale(1, 0);
+}
+
+a.btnc:after {
+  border-bottom: 1px solid;
+  border-top: 1px solid;
+  -webkit-transform: scale(0, 1);
+  transform: scale(0, 1);
+}
+
+a.btnc:hover:after,
+a.btnc:hover:before {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.tattoo {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.card > img {
+  width: 350px;
+  height: 450px;
+}
+
+.icarus_title {
+  padding-top: 100px;
+  padding-left: 610px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 20px;
+  height: 50px;
+  top: 60%; /* Adjust the vertical position as needed */
+}
+
+.carousel-control-prev {
+  left: 50px;
+}
+
+.carousel-control-next {
+  right: 50px;
+}
+
+.collections a {
+  z-index: 2; /* Adjust the z-index value as needed */
+}
+
+.icons {
+  font-size: 50px;
+  color: #ffd700;
+  cursor: pointer;
+}
+
+.icons:hover,
+.icons:active {
+  color: #ffd700;
+}
+
+.price {
+  font-family: "Roboto Slab", serif;
+  color: #8b7d33;
+  font-size: 20px;
+}
+
+.card-title {
+  color: #8b7d33;
+  font-family: "Philosopher", sans-serif;
+}
+
+.titletattoo {
+  color: #ffd700;
+  font-size: 25px;
+}
+
+.card-body {
+  text-align: center;
+}
+
+.buy-button {
+  background-color: #8b7d33;
+  color: #ffd700;
+  width: 100px;
+  height: 30px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-top-left-radius: 15px;
+  cursor: pointer;
+}
+
+/* C O L L E C T I O N S */
+
+/* A R T I S T S */
+
+/* hover effect for <a>HOME/ARTISTS/CONTACT</a> */
+a.btncl:after,
+a.btncl:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  height: 20px;
+  width: 135px;
+  margin-top: 1px;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+}
+
+a.btncl:before {
+  border-left: 1px solid;
+  border-right: 1px solid;
+  -webkit-transform: scale(1, 0);
+  transform: scale(1, 0);
+}
+
+a.btncl:after {
+  border-bottom: 1px solid;
+  border-top: 1px solid;
+  -webkit-transform: scale(0, 1);
+  transform: scale(0, 1);
+}
+
+a.btncl:hover:after,
+a.btncl:hover:before {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.btnho:after,
+a.btnho:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  height: 20px;
+  width: 59px;
+  margin-top: 1px;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+}
+
+a.btnho:before {
+  border-left: 1px solid;
+  border-right: 1px solid;
+  -webkit-transform: scale(1, 0);
+  transform: scale(1, 0);
+}
+
+a.btnho:after {
+  border-bottom: 1px solid;
+  border-top: 1px solid;
+  -webkit-transform: scale(0, 1);
+  transform: scale(0, 1);
+}
+
+a.btnho:hover:after,
+a.btnho:hover:before {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+a.btnc:after,
+a.btnc:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  height: 20px;
+  width: 93px;
+  margin-top: 1px;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+}
+
+a.btnc:before {
+  border-left: 1px solid;
+  border-right: 1px solid;
+  -webkit-transform: scale(1, 0);
+  transform: scale(1, 0);
+}
+
+a.btnc:after {
+  border-bottom: 1px solid;
+  border-top: 1px solid;
+  -webkit-transform: scale(0, 1);
+  transform: scale(0, 1);
+}
+
+a.btnc:hover:after,
+a.btnc:hover:before {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.btncl {
+  position: absolute;
+  right: 0px;
+  padding-top: 10px;
+  margin-right: 140px;
+  font-size: 20px;
+  color: #ffd700;
+}
+
+.btnho {
+  position: absolute;
+  right: 50px;
+  padding-top: 10px;
+  margin-right: 240px;
+  font-size: 20px;
+  color: #ffd700;
+}
+
+.artists {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+
+.value {
+  text-align: center;
+  padding-top: 200px;
+}
+
+.artistpg {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-bottom: 50px;
+}
+
+.nameartist {
+  color: #8b7d33;
+  font-family: "Philosopher", sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-size: 25px;
+}
+
+.artistbody {
+  background-color: #c4baa6;
+}
+
+/* A R T I S T S */
+
+/* L O C A T I O N */
+
+.finds {
+  text-align: center;
+  padding-top: 150px;
+  padding-bottom: 200px;
+}
+
+.maps {
+  width: 400px;
+  height: 400px;
+  margin-left: 200px;
+  margin-bottom: 100px;
+}
+
+.lorem {
+  color: #8b7d33;
+  font-family: "Philosopher", sans-serif;
+  margin-right: 200px;
+  border: 1px solid #8b7d33;
+  width: 400px;
+  height: 400px;
+  font-size: 20px;
+}
+
+.bking {
+  color: #ffd700;
+  padding-top: 50px;
+  text-align: center;
+}
+
+.mrgin {
+  padding-left: 35px;
+}
+
+.findmap {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.borderblk {
+  border: 1px solid #8b7d33;
+  /* border-top: 1px solid #8b7d33;
+  border-left: 1px solid #8b7d33;
+  border-right: 1px solid #8b7d33; */
+  position: absolute;
+  height: 400px;
+  width: 400px;
+  left: 320px;
+  bottom: -470px;
+}
+/* L O C A T I O N */
+
+/* C O N T A C T */
+
+a.btnar:after,
+a.btnar:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  height: 20px;
+  width: 80px;
+  margin-top: 1px;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+}
+
+a.btnar:before {
+  border-left: 1px solid;
+  border-right: 1px solid;
+  -webkit-transform: scale(1, 0);
+  transform: scale(1, 0);
+}
+
+a.btnar:after {
+  border-bottom: 1px solid;
+  border-top: 1px solid;
+  -webkit-transform: scale(0, 1);
+  transform: scale(0, 1);
+}
+
+a.btnar:hover:after,
+a.btnar:hover:before {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.btnar {
+  position: absolute;
+  right: -100px;
+  padding-top: 10px;
+  margin-right: 140px;
+  font-size: 20px;
+  color: #ffd700;
+}
+
+.cntc {
+  /* position: absolute;
+  top: 50px;
+  right: 250px; */
+  margin: auto;
+  border: 1px solid #8b7d33;
+  text-align: center;
+  height: 700px;
+  width: 800px;
+  margin-top: 150px;
+}
+
+.credential {
+  color: #ffd700;
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.undercred {
+  font-family: "Roboto Slab", serif;
+  color: #8b7d33;
+}
+
+h3 {
+  font-family: "Philosopher", sans-serif;
+  font-size: 80px;
+  margin-bottom: 70px;
+  color: #ffd700;
+  padding-top: 50px;
+}
+
+.fb {
+  color: rgb(69, 69, 254);
+  font-size: 25px;
+}
+
+.inst {
+  color: palevioletred;
+  font-size: 25px;
+}
+
+.tw {
+  color: white;
+  font-size: 25px;
+}
+
+i {
+  margin: 10px;
+}
+
+/* C O N T A C T */
