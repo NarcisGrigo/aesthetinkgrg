@@ -11,7 +11,7 @@ abstract class BaseController
     {
         extract($settings);
         include "public/header.html.php";
-        include "views/$file"; // Use the correct path to the views directory
+        include "views/$file";
         include "public/footer.html.php";
     }
 

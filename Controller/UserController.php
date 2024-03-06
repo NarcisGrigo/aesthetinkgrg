@@ -44,7 +44,7 @@ class UserController extends BaseController
 
         $errors = $this->form->getEerrorsForm();
 
-        return $this->render("user/register", [
+        return $this->render("user/register.html.php", [
             "h4" => "Add a new user",
             "user" => $user,
             "errors" => $errors
@@ -121,7 +121,6 @@ class UserController extends BaseController
 
     public function login()
     {
-
         if ($this->isUserConnected()) {
             /**
              * @var User
@@ -140,13 +139,14 @@ class UserController extends BaseController
              */
             $user = $this->getUser();
             $this->setMessage("succes", "Hello " . $user->getName() . ", you are connected");
-            redirection(addLink("home"));
+            // redirection(addLink("home"));
             return redirection(addLink("home"));
         }
 
-        $errors = $this->form->getEerrorsForm();
 
-        return $this->render("user/login", [
+
+        $errors = $this->form->getEerrorsForm();
+        return $this->render("security/login.html.php", [
             "h1" => "Enter your login credentials",
             "errors" => $errors
 
