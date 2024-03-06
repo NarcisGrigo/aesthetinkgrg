@@ -28,7 +28,7 @@ class ProductController extends BaseController
     {
         $product = $this->productRepository->findAll($this->product);
 
-        $this->render("product/index.html.php", [
+        $this->render("product/artists.html.php", [
             "h1" => "Products list",
             "products" => $product
         ]);
@@ -51,5 +51,5 @@ class ProductController extends BaseController
             error("404.php");
         }
     }
-    
+
 }

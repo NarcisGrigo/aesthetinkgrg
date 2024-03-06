@@ -12,7 +12,7 @@ function chargeClass($className)
     // ⚠ REMINDER: in namespaces, you can only use \
 
     $filePath = str_replace("\\", "/", $className);
-    $newClassName = str_replace("Controller/", "", $filePath);
+    $className = str_replace("Controller/", "", $filePath);
 
     $root = __DIR__ . "/../" . $filePath . ".php";
     // d_die($className." ok");
